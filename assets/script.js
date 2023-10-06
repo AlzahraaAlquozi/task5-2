@@ -34,23 +34,21 @@ function showSlide(index) {
   currentSlide = index;
 }
 
-// Event listeners for dot indicators
 dots.forEach((dot, index) => {
   dot.addEventListener('click', () => showSlide(index));
 });
 
-// Function to show the next slide
+
 function next() {
   const nextSlideIndex = (currentSlide + 1) % slides.length;
   showSlide(nextSlideIndex);
 }
 
-// Function to show the previous slide
+
 function pre() {
   const prevSlideIndex = (currentSlide - 1 + slides.length) % slides.length;
   showSlide(prevSlideIndex);
 }
 
-// Event listeners for next and previous buttons
 nextBtn.addEventListener('click', next);
 prevBtn.addEventListener('click', pre);
